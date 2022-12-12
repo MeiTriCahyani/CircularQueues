@@ -49,6 +49,43 @@ namespace CircularQueues
             queue_array[REAR] = element;
         }
 
-       
+        public void remove()
+        {
+                //checks wheather the queue is empty
+
+                if (FRONT == -1)
+                {
+                    Console.WriteLine("Queue underflow\n");
+                    return ;
+                }
+                Console.WriteLine("\n The Element deleted from the queue is : " + queue_array[FRONT] + "\n");
+                
+                //check if the queue has one element
+                if (FRONT == REAR)
+                {
+                    FRONT = -1;
+                    REAR = -1;
+
+                }
+                else
+                {
+                    //if the element to be deleted is at the last position of the array,
+                    //then the value of FRONT is set to 0 i.e to the first element if the array
+                    
+                    if (FRONT == max -1)
+                        FRONT = 0;
+                    else 
+                        //FRONT is incremented by one if it is not the first element of array
+
+                    FRONT = REAR +1;
+                }
+        }
+        public void display()
+        {
+            int FRONT_position = FRONT;
+            int REAR_position = REAR;
+            //Check if the queue is empty
+
+        }   
     }
 }
