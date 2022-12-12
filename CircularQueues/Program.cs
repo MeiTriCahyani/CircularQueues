@@ -80,6 +80,12 @@ namespace CircularQueues
                     FRONT = REAR +1;
                 }
         }
-        
+        public void display()
+        {
+            int FRONT_position = FRONT;
+            int REAR_position = REAR;
+            //Check if the queue is empty
+
+        }    
     }
 }
