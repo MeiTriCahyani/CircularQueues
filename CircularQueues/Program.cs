@@ -86,6 +86,11 @@ namespace CircularQueues
             int REAR_position = REAR;
             //Check if the queue is empty
 
-        }    
+            if (FRONT == -1)
+            {
+                Console.WriteLine("\nQueue is empty");
+                return;
+            }
+            
     }
 }
