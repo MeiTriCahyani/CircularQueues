@@ -126,6 +126,59 @@ namespace CircularQueues
             }
         }
         
-       
+        static void Main(string[] args)
+        {
+            Program queue = new Program();
+            char ch;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Menu");
+                    Console.WriteLine("1. Implement insert operation");
+                    Console.WriteLine("2. Implement delete operation");
+                    Console.WriteLine("3. Display values");
+                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("\n Enter your choice (1-4) : ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                Console.Write("Enter a number : ");
+                                int num = Convert.ToInt32(System.Console.ReadLine());
+                                Console.WriteLine();
+                                queue.insert(num);
+                            }
+                            break;
+                        case '2':
+                            {
+                                queue.remove();
+
+                            }
+                            break ;
+                        case '3':
+                            {
+                                queue.display();
+                            }
+                            break;
+                        case '4':
+                            return;
+                                default:
+                            {
+                                Console.WriteLine(" Invalid option !!");
+
+                            }
+                            break;
+
+                    }
+                }
+                catch (Exception ex)
+                { 
+                    Console.WriteLine("check for the values entered.");
+                }
+            }
+        }
     }
 }
